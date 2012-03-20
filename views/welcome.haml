@@ -1,0 +1,62 @@
+%h1 Columbus Clojure User Group
+%p
+  %a(href="#{@mailing_list}" target="_blank") Join the Mailing List
+  %a(href="https://twitter.com/#!/columbusclojure" target="_blank") Follow us on Twitter
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/calendar.png')
+  Next Meeting
+
+%section#when
+  %p= formatted_date(@next_meeting)
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/map_pin.png')
+  Location
+
+%section#where
+  <p>EdgeCase Columbus<br/>
+  1266 Manning Pkwy, Suite B<br/>
+  Powell, OH 43065</p>
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/comments.png')
+  Speakers
+
+%section#speakers
+  %ul
+    - @speakers.each do |sp|
+      %li
+        %strong
+          %a(href="http://#{sp['link']}")= sp["name"]
+        %br
+        = sp["talk"]
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/help.png')
+  Who We Are
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/info.png')
+  What We Do
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/link.png')
+  Join Us
+
+%p
+  Join our
+  %a(href="#{@mailing_list}") mailing list
+  and join in on all the fun.
+  %strong OR
+  just show up at our
+  %a(href="#when") next meeting
+  Meetings are held the first Wednesday of every month.
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/photo_camera.png')
+  Photos
+
+%h2
+  %img(src='/images/stylistica-icons-set/48x48/pages.png')
+  Archives
