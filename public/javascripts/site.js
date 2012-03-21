@@ -1,3 +1,9 @@
+$(function() {
+  _.each($('.thirds'), function(outer) {
+    $(outer).children().css('height', $(outer).height());
+  });
+});
+
 $('.when-link').live('click', highlightWhen);
 $('.join-link').live('click', highlightJoin);
 
