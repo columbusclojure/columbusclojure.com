@@ -34,7 +34,7 @@ end
 
 ## STYLESHEETS
 get '/:stylesheet.css' do |stylesheet|
-  scss stylesheet.to_sym
+  sass stylesheet.to_sym
 end
 
 class MeetingDates

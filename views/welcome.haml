@@ -1,62 +1,74 @@
-%h1 Columbus Clojure User Group
-%p
-  %a(href="#{@mailing_list}" target="_blank") Join the Mailing List
-  %a(href="https://twitter.com/#!/columbusclojure" target="_blank") Follow us on Twitter
+%a(href="/")
+  %h1
+    %img(src='/images/clojure-icon.gif')
+    Columbus Clojure User Group
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/calendar.png')
-  Next Meeting
+.thirds
+  #where.third
+    %h2
+      %img(src='/images/stylistica-icons-set/24x24/map_pin.png')
+      Location
 
-%section#when
-  %p= formatted_date(@next_meeting)
+    %section
+      <p>EdgeCase Columbus<br/>
+      1266 Manning Pkwy, Suite B<br/>
+      Powell, OH 43065</p>
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/map_pin.png')
-  Location
+  #when.third
+    %h2
+      %img(src='/images/stylistica-icons-set/24x24/calendar.png')
+      Next Meeting
 
-%section#where
-  <p>EdgeCase Columbus<br/>
-  1266 Manning Pkwy, Suite B<br/>
-  Powell, OH 43065</p>
+    %section
+      %p= formatted_date(@next_meeting)
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/comments.png')
-  Speakers
+  #speakers.third
+    %h2
+      %img(src='/images/stylistica-icons-set/24x24/comments.png')
+      Speakers
 
-%section#speakers
-  %ul
-    - @speakers.each do |sp|
-      %li
-        %strong
-          %a(href="http://#{sp['link']}")= sp["name"]
-        %br
-        = sp["talk"]
+    %section
+      %ul
+        - @speakers.each do |sp|
+          %li
+            %strong
+              %a(href="http://#{sp['link']}")= sp["name"]
+            %br
+            = sp["talk"]
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/help.png')
-  Who We Are
+.thirds
+  #who.third
+    %h2
+      %img(src='/images/stylistica-icons-set/24x24/help.png')
+      Who We Are
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/info.png')
-  What We Do
+    %section
+      %p
+        We are a group composed of both professionals <em>and</em> students ethusiastic about Clojure. Whether you're new Clojure or you've been hacking for years, we'd love to have you 
+        <a href="#join" class="join-link">join us</a>.
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/link.png')
-  Join Us
+  #what.third
+    %h2
+      %img(src='/images/stylistica-icons-set/24x24/info.png')
+      What We Do
 
-%p
-  Join our
-  %a(href="#{@mailing_list}") mailing list
-  and join in on all the fun.
-  %strong OR
-  just show up at our
-  %a(href="#when") next meeting
-  Meetings are held the first Wednesday of every month.
+    %section
+      %p
+        The purpose of this group is to provide a community of like-minded individuals where <em>anyone</em> can come and learn something. The format is usually several small lightning talks given by our members, followed by some hacking.
+      %p
+        Oh, and there's free food and drinks for all!
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/photo_camera.png')
-  Photos
+  #join.third
+    %h2
+      %img(src='/images/stylistica-icons-set/24x24/link.png')
+      Join Us
 
-%h2
-  %img(src='/images/stylistica-icons-set/48x48/pages.png')
-  Archives
+    %section
+      %p
+        Join our
+        %a(href="#{@mailing_list}" target="_blank") mailing list
+        and join in on all the fun.
+        %strong OR
+        just show up at our
+        <a href="#when" class="when-link">next meeting</a>. 
+        Meetings are held the first Wednesday of every month.
