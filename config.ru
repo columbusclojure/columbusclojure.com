@@ -9,6 +9,6 @@ Bundler.require
 set :env,  :production
 disable :run
 
-require "#{Dir.pwd}/server"
+require "./server"
 
 run Sinatra::Application

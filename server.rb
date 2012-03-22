@@ -2,7 +2,7 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 require 'yaml'
-require './lib/meeting_dates'
+require 'meeting_dates'
 
 helpers do
   def formatted_date(date)
