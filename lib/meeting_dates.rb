@@ -14,13 +14,15 @@ class MeetingDates
 
   def calc_meeting_dates
     start_date = Date.today.beginning_of_year
-    (0..12).inject([]){|s, num| dates_for_month(start_date + num.months)}
+    (0..12).each { |num|
+      @meeting_dates << meeting_date_for_month(start_date + num.months)
+    }
   end
 
-  def dates_for_month(relative_date)
+  def meeting_date_for_month(relative_date)
     s = relative_date.beginning_of_month
     e = relative_date.end_of_month
-    @meeting_dates << first_wednesday(s..e)
+    first_wednesday(s..e)
   end
 
   def first_wednesday(date_range)
