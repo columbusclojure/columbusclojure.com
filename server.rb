@@ -2,7 +2,6 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 require 'yaml'
-require 'active_support/all'
 require './lib/meeting_dates'
 
 helpers do
@@ -19,8 +18,8 @@ end
 
 ## VIEWS
 get '/' do
-  dates         = MeetingDates.new
   info          = YAML::load(File.open('meetings.yml'))
+  dates         = MeetingDates.new
   @next_meeting = dates.next_meeting
   date          = @next_meeting.strftime('%D')
   @speakers     = info[date] || []

@@ -1,8 +1,16 @@
+require 'active_support/all'
+
 class MeetingDates
   def initialize
     @meeting_dates = []
     calc_meeting_dates
   end
+
+  def next_meeting
+    @meeting_dates.find{|d| d > Time.now}
+  end
+
+  protected
 
   def calc_meeting_dates
     start_date = Date.today.beginning_of_year
@@ -12,15 +20,10 @@ class MeetingDates
   def dates_for_month(relative_date)
     s = relative_date.beginning_of_month
     e = relative_date.end_of_month
-    meeting_date = first_wednesday(s..e)
-    @meeting_dates << meeting_date
+    @meeting_dates << first_wednesday(s..e)
   end
 
-  def next_meeting
-    @meeting_dates.find{|d| d > Time.now}
-  end
-
-  def first_wednesday(range)
-    range.select{|d| d.wday == 3}[0] + 18.hours
+  def first_wednesday(date_range)
+    date_range.select{|d| d.wday == 3}[0] + 18.hours
   end
 end
