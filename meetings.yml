@@ -1,13 +1,19 @@
 03/07/12:
-  - name: Bill Robertson
-    link: www.google.com
-    talk: Start Learning Clojure Now
+  speakers:
+    - name: Bill Robertson
+      link: https://plus.google.com/116074209966408872882
+      talk: Start Learning Clojure Now
 
-  - name: John Andrews
-    link: https://twitter.com/xandrews
-    talk: Advanced Emacs Setup
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Advanced Emacs Setup
 
 04/04/12:
-  - name: Matthew Boston
-    link: www.matthewboston.com
-    talk: Logic Programming with core.logic
+  agenda:
+    - Introduce new website and group
+    - Clojure/conj signup
+
+  speakers:
+    - name: Matthew Boston
+      link: www.matthewboston.com
+      talk: Logic Programming with core.logico
