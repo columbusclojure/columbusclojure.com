@@ -15,5 +15,27 @@
 
   speakers:
     - name: Matthew Boston
-      link: www.matthewboston.com
+      link: http://www.matthewboston.com
       talk: Logic Programming with core.logic
+
+    - name: Raju Gandhi
+      link: http://rajugandhi.com
+      talk: MOTM
+
+    - name: Marc Peabody
+      link: https://twitter.com/marcpeabody
+      talk: Seesaw with Overtone
+
+    - name: Joshua Eckroth
+      link: http://www.cse.ohio-state.edu/~eckroth/
+      talk: Loom
+
+05/02/12:
+  speakers:
+    - name: Ryan McGowan
+      link: https://twitter.com/Ryan_VM
+      talk: slimv and VimClojure
+
+    - name: Bill Robertson
+      link: https://twitter.com/billrobertson42
+      talk: TBD

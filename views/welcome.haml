@@ -37,7 +37,7 @@
         - @speakers.each do |sp|
           %li
             %strong
-              %a(href="http://#{sp['link']}")= sp["name"]
+              %a(href="#{sp['link']}")= sp["name"]
             %br
             = sp["talk"]
 
