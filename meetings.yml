@@ -18,6 +18,10 @@
       link: http://www.matthewboston.com
       talk: Logic Programming with core.logic
 
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Logic Programming with Datomic
+
     - name: Raju Gandhi
       link: http://rajugandhi.com
       talk: MOTM
@@ -25,10 +29,6 @@
     - name: Marc Peabody
       link: https://twitter.com/marcpeabody
       talk: Seesaw with Overtone
-
-    - name: Joshua Eckroth
-      link: http://www.cse.ohio-state.edu/~eckroth/
-      talk: Loom
 
 05/02/12:
   speakers:
@@ -39,3 +39,9 @@
     - name: Bill Robertson
       link: https://twitter.com/billrobertson42
       talk: TBD
+
+TBD:
+  speakers:
+    - name: Joshua Eckroth
+      link: http://www.cse.ohio-state.edu/~eckroth/
+      talk: Loom
