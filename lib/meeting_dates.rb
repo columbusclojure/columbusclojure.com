@@ -2,7 +2,7 @@ require 'active_support/all'
 
 class MeetingDates
   def initialize
-    @meeting_dates = []
+    @meeting_dates = [].to_set
     calc_meeting_dates
   end
 
@@ -11,7 +11,6 @@ class MeetingDates
   end
 
   protected
-
   def calc_meeting_dates
     start_date = Date.today.beginning_of_year
     (0..12).each { |num|
