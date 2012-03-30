@@ -24,6 +24,7 @@ get '/' do
   date          = @next_meeting.strftime('%D')
   @speakers     = info[date]['speakers'] || []
   @mailing_list = "http://groups.google.com/group/columbusclojure"
+  @fotm         = info[date]['fotm'] || []
 
   haml :welcome
 end

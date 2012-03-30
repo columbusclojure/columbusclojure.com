@@ -22,13 +22,13 @@
       link: https://twitter.com/xandrews
       talk: Logic Programming with Datomic
 
-    - name: Raju Gandhi
-      link: http://rajugandhi.com
-      talk: MOTM
-
     - name: Marc Peabody
       link: https://twitter.com/marcpeabody
       talk: Seesaw with Overtone
+
+  fotm:
+    - name: Raju Gandhi
+      link: http://rajugandhi.com
 
 05/02/12:
   speakers:

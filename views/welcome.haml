@@ -40,6 +40,13 @@
               %a(href="#{sp['link']}")= sp["name"]
             %br
             = sp["talk"]
+        - @fotm.each do |sp|
+          %li
+            %strong
+              %a(href="#{sp['link']}")= sp["name"]
+            %br
+            %strong
+              Function of the Month
 
 .thirds
   #who.third
