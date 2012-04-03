@@ -45,3 +45,23 @@ TBD:
     - name: Joshua Eckroth
       link: http://www.cse.ohio-state.edu/~eckroth/
       talk: Loom
+
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: Building a Scrabble Solver
+
+    - name: John Andrews
+      link: link: https://twitter.com/xandrews
+      talk: Dieter
+
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: resque-clojure
+
+    - name: John Anddrews
+      link: https://twitter.com/xandrews
+      talk: Accessing Static Assets in Uberjar
+
+    - name: Matthew Boson
+      link: http://www.matthewboston.com
+      talk: Workshop: Building a Noir web app
