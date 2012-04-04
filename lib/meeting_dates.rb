@@ -7,7 +7,7 @@ class MeetingDates
   end
 
   def next_meeting
-    @meeting_dates.find{|d| d > Time.now}
+    @meeting_dates.find{|d| d > Time.now.beginning_of_day}
   end
 
   protected
