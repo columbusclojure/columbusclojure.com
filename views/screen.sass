@@ -10,21 +10,28 @@ body
     color: $text
     font: 14px/1.5 "Helvetica"
     background: #fff
-    
+
     .container
         width: 800px
         margin: auto
-    
+
+p
+    margin-bottom: 1em
+
 h1
+    margin: auto
+    position: absolute
+    top: 0.5em
     color: $dark-blue
     font-size: 3.5em
 
     img
         vertical-align: text-top
-        height: 1.3em
+        height: 1.2em
 
 h2
     font-size: 1.5em
+    margin-bottom: 1em
 
     img
         vertical-align: text-top
@@ -37,6 +44,12 @@ a
     &:hover
         text-decoration: none
         color: $lite-blue
+
+#image-bar
+    margin-bottom: 2em
+
+    img
+        width: 100%
 
 #banner
     font-size: 1.5em
@@ -61,7 +74,7 @@ a
         margin-bottom: 2em
         border-top: 3px $text solid
 
-        &:last-child 
+        &:last-child
             margin-right: 0
 
         &.colored
@@ -70,7 +83,7 @@ a
 li
     padding-bottom: 0.5em
     text-indent: -1em
-    margin-left: -2em
+    margin-left: 1em
     list-style: none
 
 .left

@@ -1,6 +1,7 @@
 %html
   %head
     %title Columbus Clojure
+    %link{:rel => "stylesheet", :href => "/stylesheets/reset.css", :type => "text/css"}
     %link{:rel => "stylesheet", :href => "/screen.css", :type => "text/css"}
     %link{:rel => "icon", :href => "/favicon.ico"}
     %link{:rel => "shortcut icon", :href => "/favicon.ico"}
@@ -10,5 +11,8 @@
     %script{:rel => "javascript", :src => "/javascripts/site.js", :type => "text/javascript"}
 
     %body
+      #image-bar
+        %img(src='/images/columbus-ohio-skyline-panorama.jpg')
+
       .container
         = yield
