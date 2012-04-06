@@ -32,6 +32,9 @@
 
 05/02/12:
   speakers:
+
+TBD:
+  speakers:
     - name: Ryan McGowan
       link: https://twitter.com/Ryan_VM
       talk: slimv and VimClojure
@@ -40,8 +43,6 @@
       link: https://twitter.com/billrobertson42
       talk: TBD
 
-TBD:
-  speakers:
     - name: Joshua Eckroth
       link: http://www.cse.ohio-state.edu/~eckroth/
       talk: Loom
