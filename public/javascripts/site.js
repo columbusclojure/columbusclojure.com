@@ -42,8 +42,9 @@ function loadTweets(){
           var text  = autoLinkTweet(tweet.text);
           var time  = Date.create(tweet.created_at).relative();
           var html  = _.template(template, {tweet: text, time: time});
-          var li    = $('<li>').html(html);
-          target.append(li);
+          var div   = $('<div>').html(html);
+          div.addClass('tweet');
+          target.append(div);
         }
       }
     }
