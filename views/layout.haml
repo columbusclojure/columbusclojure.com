@@ -35,8 +35,7 @@
             %a(href="https://twitter.com/columbusclojure" target="_blank") @ColumbusClojure
           #tweets
 
-    %script#tweetTemplate(type="text/template")
-      %li
-        %span.time <%= time %>
-        &mdash;
+      %script#tweetTemplate(type="text/template")
+        %span.time <%= time %> &mdash;
+        %br
         <%= tweet %>
