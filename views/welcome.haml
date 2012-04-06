@@ -1,86 +1,105 @@
-%h1
-  %a(href="/")
-    %img(src='/images/clojure-icon.gif')
-    Columbus Clojure User Group
+#image-bar
+  %img(src='http://upload.wikimedia.org/wikipedia/commons/f/fc/Columbus-ohio-skyline-panorama.jpg'
+       alt='Photo courtesy of http://en.wikipedia.org/wiki/File:Columbus-ohio-skyline-panorama.jpg')
 
-#banner
-  %a(href="#{@mailing_list}" target="_blank") Join the Mailing List
-  %a(href="https://twitter.com/columbusclojure" target="_blank") Follow us on Twitter
+#main
+  .container
+    %h1
+      %a(href="/")
+        %img(src='/images/clojure-icon.gif')
+        Columbus Clojure User Group
 
-.thirds
-  #where.third
+    #banner
+      %a(href="#{@mailing_list}" target="_blank") Join the Mailing List
+      %a(href="https://twitter.com/columbusclojure" target="_blank") Follow us on Twitter
+
+    .thirds
+      #where.third
+        %h2
+          %img(src='/images/stylistica-icons-set/24x24/map_pin.png')
+          Location
+
+        %section
+          %a(href="http://maps.google.com/maps?q=1266+Manning+Pkwy+Suite+B,+Powell,+OH+43065&hl=en&sll=40.140172,-83.041019&sspn=0.00803,0.008937&hnear=1266+Manning+Pkwy,+Powell,+Ohio+43065&t=m&z=17" target="_blank")
+            <p>EdgeCase Columbus<br/>
+            1266 Manning Pkwy, Suite B<br/>
+            Powell, OH 43065</p>
+
+      #when.third
+        %h2
+          %img(src='/images/stylistica-icons-set/24x24/calendar.png')
+          Next Meeting
+
+        %section
+          %p= formatted_date(@next_meeting)
+
+      #speakers.third
+        %h2
+          %img(src='/images/stylistica-icons-set/24x24/comments.png')
+          Speakers
+
+        %section
+          %ul
+            - @speakers.each do |sp|
+              %li
+                %strong
+                  %a(href="#{sp['link']}")= sp["name"]
+                %br
+                = sp["talk"]
+            - @fotm.each do |sp|
+              %li
+                %strong
+                  %a(href="#{sp['link']}")= sp["name"]
+                %br
+                %strong
+                  Function of the Month
+
+    .thirds
+      #who.third
+        %h2
+          %img(src='/images/stylistica-icons-set/24x24/help.png')
+          Who We Are
+
+        %section
+          %p
+            We are an open group composed of both professionals <em>and</em> students enthusiastic about Clojure. Whether you're new Clojure or you've been hacking for years, we'd love to have you 
+            <a href="#join" class="join-link">join us</a>.
+
+      #what.third
+        %h2
+          %img(src='/images/stylistica-icons-set/24x24/info.png')
+          What We Do
+
+        %section
+          %p
+            The purpose of this group is to provide a community of like-minded individuals where <em>anyone</em> can come and learn something. The format is usually several small lightning talks given by our members, followed by some hacking.
+          %p
+            Oh, and there's free food and drinks!
+
+      #join.third
+        %h2
+          %img(src='/images/stylistica-icons-set/24x24/link.png')
+          Join Us
+
+        %section
+          %p
+            Join our
+            %a(href="#{@mailing_list}" target="_blank") mailing list
+            and join in on all the fun.
+            %strong OR
+            just show up at our
+            <a href="#when" class="when-link">next meeting</a>.
+            Meetings are held the first Wednesday of every month.
+
+#twitter
+  %img(src='/images/twitter-newbird-white.png')
+  .container
     %h2
-      %img(src='/images/stylistica-icons-set/24x24/map_pin.png')
-      Location
+      Latest Tweets from
+      %a(href="https://twitter.com/columbusclojure" target="_blank") @ColumbusClojure
+    #tweets
 
-    %section
-      %a(href="http://maps.google.com/maps?q=1266+Manning+Pkwy+Suite+B,+Powell,+OH+43065&hl=en&sll=40.140172,-83.041019&sspn=0.00803,0.008937&hnear=1266+Manning+Pkwy,+Powell,+Ohio+43065&t=m&z=17" target="_blank")
-        <p>EdgeCase Columbus<br/>
-        1266 Manning Pkwy, Suite B<br/>
-        Powell, OH 43065</p>
-
-  #when.third
-    %h2
-      %img(src='/images/stylistica-icons-set/24x24/calendar.png')
-      Next Meeting
-
-    %section
-      %p= formatted_date(@next_meeting)
-
-  #speakers.third
-    %h2
-      %img(src='/images/stylistica-icons-set/24x24/comments.png')
-      Speakers
-
-    %section
-      %ul
-        - @speakers.each do |sp|
-          %li
-            %strong
-              %a(href="#{sp['link']}")= sp["name"]
-            %br
-            = sp["talk"]
-        - @fotm.each do |sp|
-          %li
-            %strong
-              %a(href="#{sp['link']}")= sp["name"]
-            %br
-            %strong
-              Function of the Month
-
-.thirds
-  #who.third
-    %h2
-      %img(src='/images/stylistica-icons-set/24x24/help.png')
-      Who We Are
-
-    %section
-      %p
-        We are an open group composed of both professionals <em>and</em> students enthusiastic about Clojure. Whether you're new Clojure or you've been hacking for years, we'd love to have you 
-        <a href="#join" class="join-link">join us</a>.
-
-  #what.third
-    %h2
-      %img(src='/images/stylistica-icons-set/24x24/info.png')
-      What We Do
-
-    %section
-      %p
-        The purpose of this group is to provide a community of like-minded individuals where <em>anyone</em> can come and learn something. The format is usually several small lightning talks given by our members, followed by some hacking.
-      %p
-        Oh, and there's free food and drinks!
-
-  #join.third
-    %h2
-      %img(src='/images/stylistica-icons-set/24x24/link.png')
-      Join Us
-
-    %section
-      %p
-        Join our
-        %a(href="#{@mailing_list}" target="_blank") mailing list
-        and join in on all the fun.
-        %strong OR
-        just show up at our
-        <a href="#when" class="when-link">next meeting</a>.
-        Meetings are held the first Wednesday of every month.
+%script#tweetTemplate(type="text/template")
+  %span.time <%= time %> &mdash;
+  %br
+  <%= tweet %>

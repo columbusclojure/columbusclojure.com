@@ -19,23 +19,4 @@
     %script{:rel => "javascript", :src => "/javascripts/site.js", :type => "text/javascript"}
 
     %body
-      #image-bar
-        %img(src='http://upload.wikimedia.org/wikipedia/commons/f/fc/Columbus-ohio-skyline-panorama.jpg'
-             alt='Photo courtesy of http://en.wikipedia.org/wiki/File:Columbus-ohio-skyline-panorama.jpg')
-
-      #main
-        .container
-          = yield
-
-      #twitter
-        %img(src='/images/twitter-newbird-white.png')
-        .container
-          %h2
-            Latest Tweets from
-            %a(href="https://twitter.com/columbusclojure" target="_blank") @ColumbusClojure
-          #tweets
-
-      %script#tweetTemplate(type="text/template")
-        %span.time <%= time %> &mdash;
-        %br
-        <%= tweet %>
+      = yield
