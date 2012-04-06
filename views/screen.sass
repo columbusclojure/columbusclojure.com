@@ -29,6 +29,9 @@ h1
         vertical-align: text-top
         height: 1.2em
 
+    a:hover
+        text-decoration: none
+
 h2
     font-size: 1.5em
     margin-bottom: 1em
@@ -42,14 +45,15 @@ a
         color: $dark-blue
 
     &:hover
-        text-decoration: none
-        color: $lite-blue
+        text-decoration: underline
 
 #image-bar
     margin-bottom: 2em
 
     img
         width: 100%
+
+//#main
 
 #banner
     font-size: 1.5em
@@ -61,8 +65,28 @@ a
         color: $dark-green
         margin: 2em
 
-        &:hover
-            color: $lite-green
+#twitter
+    background-color: $lite-blue
+    height: 400px
+    padding-top: 2em
+    padding-left: 2em
+
+    img
+        float: left
+        width: 15%
+
+#tweets
+    li
+        list-style: none
+        margin-bottom: 0.2em
+
+        .time
+            font-weight: bold
+
+    a
+        &, &:visited
+            color: $text
+            font-weight: bold
 
 .thirds
     overflow: hidden
