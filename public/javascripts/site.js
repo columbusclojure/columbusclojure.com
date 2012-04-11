@@ -12,18 +12,32 @@ $('.join-link').live('click', highlightJoin);
 function highlightWhen (e) {
   e.preventDefault();
   $('#when').effect('highlight', {'color': '#91dc47'}, 3000);
-}
+};
 
 function highlightJoin (e) {
   e.preventDefault();
   $('#join').effect('highlight', {'color': '#91dc47'}, 3000);
-}
+};
+
+function autoLinkUrl(text) {
+  var urlRegex = /(https?\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g;
+  return text.replace(urlRegex, "<a href='$1'>$1</a>");
+};
+
+function autoLinkUser(text) {
+  var urlRegex = /@(\w+)/g;
+  return text.replace(urlRegex, "<a href='http://twitter.com/$1'>@$1</a>");
+};
+
+function autoLinkHashtag(text) {
+  var urlRegex = /#(\w+)/g;
+  return text.replace(urlRegex, "<a href='https://twitter.com//search/%23$1'>#$1</a>");
+};
 
 function autoLinkTweet(text){
-  var urlRegex = /(https?\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g;
-  text = text.replace(urlRegex, "<a href='$1'>$1</a>");
-  text = text.replace(/@(\w+)/gi, "<a href='http://twitter.com/$1'>@$1</a>");
-  return text;
+  text = autoLinkUrl(text);
+  text = autoLinkUser(text);
+  return autoLinkHashtag(text);
 };
 
 function loadTweets(){
