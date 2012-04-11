@@ -44,6 +44,7 @@ function loadTweets(){
           var html  = _.template(template, {tweet: text, time: time});
           var div   = $('<div>').html(html);
           div.addClass('tweet');
+          div.addClass('half');
           target.append(div);
         }
       }
