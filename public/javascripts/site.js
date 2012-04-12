@@ -31,7 +31,7 @@ function autoLinkUser(text) {
 
 function autoLinkHashtag(text) {
   var urlRegex = /#(\w+)/g;
-  return text.replace(urlRegex, "<a href='https://twitter.com//search/%23$1'>#$1</a>");
+  return text.replace(urlRegex, "<a href='https://twitter.com/search/%23$1'>#$1</a>");
 };
 
 function autoLinkTweet(text){
