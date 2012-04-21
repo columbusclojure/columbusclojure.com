@@ -1,7 +1,7 @@
 03/07/12:
   speakers:
     - name: Bill Robertson
-      link: https://plus.google.com/116074209966408872882
+      link: https://twitter.com/billrobertson42
       talk: Start Learning Clojure Now
 
     - name: John Andrews
@@ -20,7 +20,7 @@
 
     - name: John Andrews
       link: https://twitter.com/xandrews
-      talk: Logic Programming with Datomic
+      talk: Datomic
 
     - name: Marc Peabody
       link: https://twitter.com/marcpeabody
@@ -43,10 +43,6 @@ TBD:
       link: https://twitter.com/billrobertson42
       talk: TBD
 
-    - name: Joshua Eckroth
-      link: http://www.cse.ohio-state.edu/~eckroth/
-      talk: Loom
-
     - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: Building a Scrabble Solver
@@ -62,6 +58,11 @@ TBD:
     - name: John Anddrews
       link: https://twitter.com/xandrews
       talk: Accessing Static Assets in Uberjar
+
+      # has Wednesday nigth class this quarter
+    - name: Joshua Eckroth
+      link: http://www.cse.ohio-state.edu/~eckroth/
+      talk: Loom
 
     - name: Matthew Boson
       link: http://www.matthewboston.com
