@@ -36,6 +36,10 @@
       link: https://twitter.com/Ryan_VM
       talk: slimv and VimClojure
 
+  fotm:
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: interleave
 TBD:
   speakers:
     - name: Bill Robertson
