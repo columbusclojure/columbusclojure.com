@@ -32,13 +32,12 @@
 
 05/02/12:
   speakers:
-
-TBD:
-  speakers:
     - name: Ryan McGowan
       link: https://twitter.com/Ryan_VM
       talk: slimv and VimClojure
 
+TBD:
+  speakers:
     - name: Bill Robertson
       link: https://twitter.com/billrobertson42
       talk: TBD
