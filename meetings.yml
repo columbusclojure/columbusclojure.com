@@ -71,3 +71,9 @@ TBD:
     - name: Matthew Boson
       link: http://www.matthewboston.com
       talk: 'Workshop: Building a Noir web app'
+
+  fotm:
+    - talk: interpose
+    - talk: into
+    - talk: iterate
+    - talk: juxt
