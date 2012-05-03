@@ -43,6 +43,10 @@
       talk: interleave
 TBD:
   speakers:
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Macros
+
     - name: Bill Robertson
       link: https://twitter.com/billrobertson42
       talk: TBD
@@ -71,6 +75,10 @@ TBD:
     - name: Matthew Boson
       link: http://www.matthewboston.com
       talk: 'Workshop: Building a Noir web app'
+
+    - name: Matthew Boson
+      link: http://www.matthewboston.com
+      talk: 'Testing in Clojure: core.test vs. speclj vs. Midje'
 
   fotm:
     - talk: interpose
