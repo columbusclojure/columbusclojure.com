@@ -44,14 +44,12 @@
 
 06/06/12:
   speakers:
-  fotm:
-
-TBD:
-  speakers:
     - name: John Andrews
       link: https://twitter.com/xandrews
       talk: Macros
 
+TBD:
+  speakers:
     - name: Bill Robertson
       link: https://twitter.com/billrobertson42
       talk: TBD
