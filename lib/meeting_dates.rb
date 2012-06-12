@@ -1,4 +1,5 @@
 require 'active_support/all'
+require 'meeting'
 
 class MeetingDates
   def initialize
@@ -6,11 +7,12 @@ class MeetingDates
     calc_meeting_dates
   end
 
-  def next_meeting
-    @meeting_dates.find{|d| d > Time.now.beginning_of_day}
+  def next
+    Meeting.new @meeting_dates.find{|d| d > Time.now.beginning_of_day}
   end
 
   protected
+
   def calc_meeting_dates
     start_date = Date.today.beginning_of_year
     (0..12).each { |num|

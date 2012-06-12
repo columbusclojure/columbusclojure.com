@@ -5,6 +5,7 @@ require 'haml'
 require 'sass'
 require 'yaml'
 require 'meeting_dates'
+require 'pry'
 
 helpers do
   def formatted_date(date)
@@ -20,13 +21,13 @@ end
 
 ## VIEWS
 get '/' do
-  info          = YAML::load(File.open('meetings.yml'))
-  dates         = MeetingDates.new
-  @next_meeting = dates.next_meeting
-  date          = @next_meeting.strftime('%D')
-  @speakers     = info[date]['speakers'] || []
+  info              = YAML::load(File.open('meetings.yml'))
+  @next_meeting     = MeetingDates.new.next
+  next_meeting_date = @next_meeting.date.strftime('%D')
+  @speakers         = info[next_meeting_date].try(['speakers']) || []
+  @fotm             = info[next_meeting_date].try(['fotm']) || []
+
   @mailing_list = "http://groups.google.com/group/columbusclojure"
-  @fotm         = info[date]['fotm'] || []
 
   haml :welcome
 end
