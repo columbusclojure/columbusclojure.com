@@ -8,9 +8,16 @@ require 'meeting_dates'
 require 'pry'
 
 helpers do
-  def formatted_date(date)
-    day = date.day.ordinalize
-    date.strftime("%A, %B #{day}, %Y at %l:%M%P")
+  def formatted_weekday(date)
+    date.strftime("%A")
+  end
+
+  def formatted_month_day(date)
+    date.strftime("%b %d")
+  end
+
+  def formatted_time(date)
+    date.strftime("%l:%M%P")
   end
 end
 

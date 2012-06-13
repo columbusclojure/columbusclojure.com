@@ -34,7 +34,13 @@
           Next Meeting
 
         %section
-          %p= formatted_date(@next_meeting.date)
+          #date-block
+            %span.weekday
+              = formatted_weekday(@next_meeting.date)
+            %span.month-day
+              = formatted_month_day(@next_meeting.date)
+            %span.time
+              = formatted_time(@next_meeting.date)
 
       #speakers.third
         %h2
