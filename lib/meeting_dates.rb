@@ -23,7 +23,7 @@ class MeetingDates
   def meeting_date_for_month(relative_date)
     s = relative_date.beginning_of_month
     e = relative_date.end_of_month
-    first_wednesday(s..e)
+    s != Date.parse('2012-07-01') ? first_wednesday(s..e) : (Date.parse('2012-07-11') + 18.hours)
   end
 
   def first_wednesday(date_range)
