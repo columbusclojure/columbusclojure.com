@@ -68,7 +68,7 @@
   speakers:
     - name: Bill Robertson
       link: https://twitter.com/billrobertson42
-      talk: TBD
+      talk: Live Stunt Coding in Front of 100 Waiting People
 
   fotm:
     - name: Mark Tareshawty
@@ -77,10 +77,6 @@
 
 TBD:
   speakers:
-    - name: Bill Robertson
-      link: https://twitter.com/billrobertson42
-      talk: TBD
-
     - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: Building a Scrabble Solver
@@ -110,8 +106,11 @@ TBD:
       link: http://www.matthewboston.com
       talk: 'Testing in Clojure: core.test vs. speclj vs. Midje'
 
+    - name: Matthew Boson
+      link: http://www.matthewboston.com
+      talk: Integrating Clojure into Your Existing Java App
+
   fotm:
     - talk: interpose
     - talk: into
     - talk: iterate
-    - talk: juxt
