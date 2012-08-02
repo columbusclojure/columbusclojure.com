@@ -66,14 +66,17 @@
 
 08/01/12:
   speakers:
-    - name: Bill Robertson
-      link: https://twitter.com/billrobertson42
-      talk: Live Stunt Coding in Front of 100 Waiting People
 
   fotm:
     - name: Mark Tareshawty
       link: https://twitter.com/Tarebyte
-      talk: TBD
+      talk: group-by
+
+09/05/12:
+  speakers:
+    - name: Bill Robertson
+      link: https://twitter.com/billrobertson42
+      talk: Live Stunt Coding in Front of 100 Waiting People
 
 TBD:
   speakers:
@@ -108,9 +111,10 @@ TBD:
 
     - name: Matthew Boson
       link: http://www.matthewboston.com
-      talk: Integrating Clojure into Your Existing Java App
+      talk: Bringing Clojure into Your Existing Java App
 
   fotm:
     - talk: interpose
     - talk: into
     - talk: iterate
+    - talk: merge-with
