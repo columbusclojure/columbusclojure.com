@@ -16,8 +16,7 @@ class MeetingDates
   protected
 
   def calc_meeting_dates
-    start_date = Date.today.beginning_of_year
-    (0..12).each { |num|
+    (0..12).each_with_object(Date.today.beginning_of_year) { |num, start_date|
       @meeting_dates << meeting_date_for_month(start_date + num.months)
     }
   end
@@ -25,10 +24,10 @@ class MeetingDates
   def meeting_date_for_month(relative_date)
     s = relative_date.beginning_of_month
     e = relative_date.end_of_month
-    s != Date.parse('2012-07-01') ? first_wednesday(s..e) : (Date.parse('2012-07-11') + SIX_OCLOCK)
+    s != Date.parse('2012-07-01') ? first_wednesday(s..e) + SIX_OCLOCK : (Date.parse('2012-07-11') + SIX_OCLOCK)
   end
 
   def first_wednesday(date_range)
-    date_range.select{|d| d.wday == 3}[0] + SIX_OCLOCK
+    date_range.select{|d| d.wday == 3}[0]
   end
 end

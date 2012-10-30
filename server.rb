@@ -28,11 +28,15 @@ end
 
 ## VIEWS
 get '/' do
-  info              = YAML::load(File.open('meetings.yml'))
-  @next_meeting     = MeetingDates.new.next
-  next_meeting_date = @next_meeting.date.strftime('%D')
-  @speakers         = info[next_meeting_date]['speakers'] || []
-  @fotm             = info[next_meeting_date]['fotm'] || []
+  @next_meeting      = MeetingDates.new.next
+
+  info               = YAML::load(File.open('meetings.yml'))
+  next_meeting_talks = info[@next_meeting.date.strftime("%D")]
+
+  if next_meeting_talks
+    @next_meeting.speakers = next_meeting_talks['speakers'] || []
+    @next_meeting.fotm     = next_meeting_talks['fotm'] || []
+  end
 
   @mailing_list = "http://groups.google.com/group/columbusclojure"
 
