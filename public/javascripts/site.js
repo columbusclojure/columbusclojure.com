@@ -44,7 +44,7 @@ function loadTweets(){
   var target     = $('#tweets');
   var template   = $('#tweetTemplate').html();
   var tweetCount = 6;
-  var tweet_url  = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=columbusclojure&trim_user=1&exclude_replies=1";
+  var tweet_url  = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=columbusclojure&trim_user=1&exclude_replies=0";
 
   $.ajax({
     url: tweet_url,
