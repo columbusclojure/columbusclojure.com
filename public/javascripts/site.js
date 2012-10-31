@@ -40,16 +40,29 @@ function autoLinkTweet(text){
   return autoLinkHashtag(text);
 };
 
-function loadTweets(){
+function drawTweet(tweet) {
   var $tweets    = $('#tweets');
   var template   = $('#tweetTemplate').html();
+
+  if (!_.isUndefined(tweet)) {
+    var text  = autoLinkTweet(tweet.text);
+    var time  = Date.create(tweet.created_at).relative();
+    var html  = _.template(template, {tweet: text, time: time});
+    var div   = $('<div>').html(html);
+    div.addClass('tweet');
+    div.addClass('half');
+    $tweets.append(div);
+  }
+};
+
+function loadTweets() {
   var tweets_url = "http://api.twitter.com/1/statuses/user_timeline.json";
   var opts = {
     screen_name     : "columbusclojure",
-    trim_user       : "1",
-    include_rts     : "1",
-    exclude_replies : "0",
-    count           : "6"
+    trim_user       : 1,
+    include_rts     : 1,
+    exclude_replies : 0,
+    count           : 6
   };
 
   $.ajax({
@@ -58,15 +71,7 @@ function loadTweets(){
     dataType: 'jsonp',
     success: function(data) {
       _.each(data, function(tweet) {
-        if (!_.isUndefined(tweet)) {
-          var text  = autoLinkTweet(tweet.text);
-          var time  = Date.create(tweet.created_at).relative();
-          var html  = _.template(template, {tweet: text, time: time});
-          var div   = $('<div>').html(html);
-          div.addClass('tweet');
-          div.addClass('half');
-          $tweets.append(div);
-        }
+        drawTweet(tweet);
       });
     }
   });
