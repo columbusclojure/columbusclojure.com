@@ -40,31 +40,23 @@ function autoLinkTweet(text){
   return autoLinkHashtag(text);
 };
 
-function buildTwitterApi(opts) {
-  var tweets_url = "http://api.twitter.com/1/statuses/user_timeline.json?";
-
-  _.each(opts, function(val, key) {
-    tweets_url += key + "=" + val + "&";
-  });
-
-  return tweets_url;
-}
-
 function loadTweets(){
   var $tweets    = $('#tweets');
   var template   = $('#tweetTemplate').html();
-  var tweets_url = buildTwitterApi({
+  var tweets_url = "http://api.twitter.com/1/statuses/user_timeline.json";
+  var opts = {
     screen_name     : "columbusclojure",
     trim_user       : "1",
     include_rts     : "1",
     exclude_replies : "0",
     count           : "6"
-  });
+  };
 
   $.ajax({
     url: tweets_url,
+    data: opts,
     dataType: 'jsonp',
-    success: function(data){
+    success: function(data) {
       _.each(data, function(tweet) {
         if (!_.isUndefined(tweet)) {
           var text  = autoLinkTweet(tweet.text);
