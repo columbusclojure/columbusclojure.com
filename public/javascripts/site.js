@@ -40,6 +40,15 @@ function autoLinkTweet(text){
   return autoLinkHashtag(text);
 };
 
+function buildTwitterApi(opts) {
+  return "http://api.twitter.com/1/statuses/user_timeline.json"
+    + "?screen_name=" + opts.screen_name
+    + "&trim_user=" + opts.trim_user
+    + "&include_rts=" + opts.include_rts
+    + "&exclude_replies=" + opts.exclude_replies
+    + "&count=" + opts.count;
+}
+
 function loadTweets(){
   var $tweets    = $('#tweets');
   var template   = $('#tweetTemplate').html();
@@ -50,13 +59,8 @@ function loadTweets(){
     exclude_replies : "0",
     count           : "6"
   };
-  // var tweets_url = "screen_name=columbusclojure&trim_user=1&include_rts=1&exclude_replies=0";
-  var tweets_url = "http://api.twitter.com/1/statuses/user_timeline.json"
-    + "?screen_name=" + opts.screen_name
-    + "&trim_user=" + opts.trim_user
-    + "&include_rts=" + opts.include_rts
-    + "&exclude_replies=" + opts.exclude_replies
-    + "&count=" + opts.count;
+
+  var tweets_url = buildTwitterApi(opts);
 
   $.ajax({
     url: tweets_url,
@@ -74,4 +78,5 @@ function loadTweets(){
         }
       });
     }
-  });};
+  });
+};
