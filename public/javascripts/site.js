@@ -41,27 +41,37 @@ function autoLinkTweet(text){
 };
 
 function loadTweets(){
-  var target     = $('#tweets');
+  var $tweets    = $('#tweets');
   var template   = $('#tweetTemplate').html();
-  var tweetCount = 6;
-  var tweet_url  = "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=columbusclojure&trim_user=1&exclude_replies=0";
+  var opts       = {
+    screen_name     : "columbusclojure",
+    trim_user       : "1",
+    include_rts     : "1",
+    exclude_replies : "0",
+    count           : "6"
+  };
+  // var tweets_url = "screen_name=columbusclojure&trim_user=1&include_rts=1&exclude_replies=0";
+  var tweets_url = "http://api.twitter.com/1/statuses/user_timeline.json"
+    + "?screen_name=" + opts.screen_name
+    + "&trim_user=" + opts.trim_user
+    + "&include_rts=" + opts.include_rts
+    + "&exclude_replies=" + opts.exclude_replies
+    + "&count=" + opts.count;
 
   $.ajax({
-    url: tweet_url,
+    url: tweets_url,
     dataType: 'jsonp',
     success: function(data){
-      for(var i=0; i<tweetCount; i++){
-        var tweet = data[i];
-        if (tweet !== undefined) {
+      _.each(data, function(tweet) {
+        if (!_.isUndefined(tweet)) {
           var text  = autoLinkTweet(tweet.text);
           var time  = Date.create(tweet.created_at).relative();
           var html  = _.template(template, {tweet: text, time: time});
           var div   = $('<div>').html(html);
           div.addClass('tweet');
           div.addClass('half');
-          target.append(div);
+          $tweets.append(div);
         }
-      }
+      });
     }
-  });
-};
+  });};
