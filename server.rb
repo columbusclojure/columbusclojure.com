@@ -1,30 +1,13 @@
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + '/lib')).uniq!
 
 require 'sinatra'
+require 'pry'
 require 'haml'
 require 'sass'
 require 'yaml'
 require 'meeting_dates'
-require 'pry'
-
-helpers do
-  def formatted_weekday(date)
-    date.strftime("%A")
-  end
-
-  def formatted_month_day(date)
-    date.strftime("%b %d")
-  end
-
-  def formatted_time(date)
-    date.strftime("%l:%M%P")
-  end
-end
-
-configure do
-  set :haml, { :format => :html5 }
-  set :sass, { :style => :compact }
-end
+require 'config'
+require 'helpers'
 
 ## VIEWS
 get '/' do
