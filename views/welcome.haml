@@ -14,7 +14,7 @@
 
     #banner
       %a(href="#{@mailing_list}" target="_blank") Join the Mailing List
-      %a(href="https://twitter.com/columbusclojure" target="_blank") Follow us on Twitter
+      %a(href="#{@twitter_url}" target="_blank") Follow us on Twitter
 
     .thirds
       #where.third
@@ -106,7 +106,7 @@
   .container
     %h2
       Latest Tweets from
-      %a(href="https://twitter.com/columbusclojure" target="_blank") @ColumbusClojure
+      %a(href="#{@twitter_url}" target="_blank") @ColumbusClojure
     #tweets.halves
 
 %script#tweetTemplate(type="text/template")

@@ -22,6 +22,7 @@ get '/' do
   end
 
   @mailing_list = "http://groups.google.com/group/columbusclojure"
+  @twitter_url  = "https://twitter.com/columbusclojure"
 
   haml :welcome
 end
