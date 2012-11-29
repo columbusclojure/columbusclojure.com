@@ -88,6 +88,14 @@
     - name: John Andrews
       link: https://twitter.com/xandrews
 
+12/05/12:
+  speakers:
+    - name: Eric Wilson
+      link: https://twitter.com/WilsonEricN
+      talk: "Show and Tell: MasterMind"
+
+  fotm:
+
 TBD:
   speakers:
     - name: Bill Robertson
