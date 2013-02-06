@@ -4,11 +4,10 @@
       link: https://twitter.com/billrobertson42
       talk: Show and Tell
 
+  fotm:
     - name: John Andrews
       link: https://twitter.com/xandrews
-      talk: Intro to Datomic
-
-  fotm:
+      talk: read-string
 
 TBD:
   speakers:
