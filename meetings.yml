@@ -11,10 +11,6 @@
 
 TBD:
   speakers:
-    - name: Bill Robertson
-      link: https://twitter.com/billrobertson42
-      talk: Live Stunt Coding in Front of 100 Waiting People
-
     - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: Building a Scrabble Solver
@@ -31,7 +27,6 @@ TBD:
       link: https://twitter.com/xandrews
       talk: Accessing Static Assets in Uberjar
 
-      # has Wednesday night class this quarter
     - name: Joshua Eckroth
       link: http://www.cse.ohio-state.edu/~eckroth/
       talk: Loom
