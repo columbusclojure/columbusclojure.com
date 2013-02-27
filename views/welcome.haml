@@ -34,19 +34,7 @@
         = haml :what
 
       #join.third
-        %h2
-          %img(src='/images/stylistica-icons-set/24x24/link.png')
-          Join Us
-
-        %section
-          %p
-            Join our
-            %a(href="#{@mailing_list}" target="_blank") mailing list
-            and join in on all the fun.
-            %strong OR
-            just show up at our
-            <a href="#when" class="when-link">next meeting</a>.
-            Meetings are held the first Wednesday of every month.
+        = haml :join, :locals => {:mailing_list => @mailing_list}
 
 #twitter
   %img(src='/images/twitter-bird-dark-bgs.png')
