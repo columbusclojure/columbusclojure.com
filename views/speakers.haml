@@ -1,0 +1,10 @@
+%h2
+  %img(src='/images/stylistica-icons-set/24x24/comments.png')
+  Speakers
+
+%section
+  %ul
+    - if next_meeting.speakers.empty? && next_meeting.fotm.empty?
+      = haml :call_for_speakers, :locals => {:mailing_list => mailing_list}
+    - else
+      = haml :speakers_list, :locals => {:speakers => next_meeting.speakers, :fotm => next_meeting.fotm}

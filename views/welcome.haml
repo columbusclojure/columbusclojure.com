@@ -18,77 +18,23 @@
 
     .thirds
       #where.third
-        %h2
-          %img(src='/images/stylistica-icons-set/24x24/map_pin.png')
-          Location
-
-        %section
-          %a(href="http://maps.google.com/maps?q=1266+Manning+Pkwy+Suite+B,+Powell,+OH+43065&hl=en&sll=40.140172,-83.041019&sspn=0.00803,0.008937&hnear=1266+Manning+Pkwy,+Powell,+Ohio+43065&t=m&z=17" target="_blank")
-            <p>Neo Columbus<br/>
-            1266 Manning Pkwy, Suite B<br/>
-            Powell, OH 43065</p>
+        = haml :where
 
       #when.third
-        %h2
-          %img(src='/images/stylistica-icons-set/24x24/calendar.png')
-          Next Meeting
-
-        %section
-          #date-block
-            %span.weekday
-              = formatted_weekday(@next_meeting.date)
-            %span.month-day
-              = formatted_month_day(@next_meeting.date)
-            %span.time
-              = formatted_time(@next_meeting.date)
+        = haml :when, :locals => {:next_meeting => @next_meeting}
 
       #speakers.third
-        %h2
-          %img(src='/images/stylistica-icons-set/24x24/comments.png')
-          Speakers
+        = haml :speakers, :locals => {:next_meeting => @next_meeting, :mailing_list => @mailing_list}
 
-        %section
-          %ul
-            - if @next_meeting.speakers.empty? && @next_meeting.fotm.empty?
-              = haml :looking_for_speakers
-            - else
-              = haml :speakers_list
     .thirds
       #who.third
-        %h2
-          %img(src='/images/stylistica-icons-set/24x24/help.png')
-          Who We Are
-
-        %section
-          %p
-            We are an open group composed of both professionals <em>and</em> students enthusiastic about Clojure. Whether you're new Clojure or you've been hacking for years, we'd love to have you 
-            <a href="#join" class="join-link">join us</a>.
+        = haml :who
 
       #what.third
-        %h2
-          %img(src='/images/stylistica-icons-set/24x24/info.png')
-          What We Do
-
-        %section
-          %p
-            The purpose of this group is to provide a community of like-minded individuals where <em>anyone</em> can come and learn something. The format is usually several small lightning talks given by our members, followed by some hacking.
-          %p
-            Oh, and there's free food and drinks!
+        = haml :what
 
       #join.third
-        %h2
-          %img(src='/images/stylistica-icons-set/24x24/link.png')
-          Join Us
-
-        %section
-          %p
-            Join our
-            %a(href="#{@mailing_list}" target="_blank") mailing list
-            and join in on all the fun.
-            %strong OR
-            just show up at our
-            <a href="#when" class="when-link">next meeting</a>.
-            Meetings are held the first Wednesday of every month.
+        = haml :join, :locals => {:mailing_list => @mailing_list}
 
 #twitter
   %img(src='/images/twitter-bird-dark-bgs.png')
