@@ -50,7 +50,7 @@
         %section
           %ul
             - if @next_meeting.speakers.empty? && @next_meeting.fotm.empty?
-              = haml :looking_for_speakers
+              = haml :call_for_speakers
             - else
               = haml :speakers_list
     .thirds
