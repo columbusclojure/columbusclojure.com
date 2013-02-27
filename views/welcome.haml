@@ -21,10 +21,10 @@
         = haml :where
 
       #when.third
-        = haml :when
+        = haml :when, :locals => {:next_meeting => @next_meeting}
 
       #speakers.third
-        = haml :speakers
+        = haml :speakers, :locals => {:next_meeting => @next_meeting, :mailing_list => @mailing_list}
 
     .thirds
       #who.third
