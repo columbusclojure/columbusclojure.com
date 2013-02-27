@@ -49,6 +49,11 @@
 
         %section
           %ul
+            - if @next_meeting.speakers.empty? && @next_meeting.fotm.empty?
+              %p
+                Do you have something you'd like to talk about? We're looking for speakers for our next meeting.
+              %p
+                %a(href="#{@mailing_list}" target="_blank") Let us know!
             - @next_meeting.speakers.each do |sp|
               %li
                 %strong
