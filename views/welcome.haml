@@ -50,25 +50,9 @@
         %section
           %ul
             - if @next_meeting.speakers.empty? && @next_meeting.fotm.empty?
-              %p
-                Do you have something you'd like to talk about? We're looking for speakers for our next meeting.
-              %p
-                %a(href="#{@mailing_list}" target="_blank") Let us know!
-            - @next_meeting.speakers.each do |sp|
-              %li
-                %strong
-                  %a(href="#{sp['link']}")= sp["name"]
-                %br
-                = sp["talk"]
-            - @next_meeting.fotm.each do |sp|
-              %li
-                %strong
-                  %a(href="#{sp['link']}")= sp["name"]
-                %br
-                %strong
-                  Function of the Month:
-                %em #{sp['talk']}
-
+              = haml :looking_for_speakers
+            - else
+              = haml :speakers_list
     .thirds
       #who.third
         %h2

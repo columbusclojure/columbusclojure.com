@@ -1,0 +1,14 @@
+- @next_meeting.speakers.each do |speaker|
+  %li
+    %strong
+      %a(href="#{speaker['link']}")= speaker["name"]
+    %br
+    = speaker["talk"]
+- @next_meeting.fotm.each do |fspeaker|
+  %li
+    %strong
+      %a(href="#{fspeaker['link']}")= fspeaker["name"]
+    %br
+    %strong
+      Function of the Month:
+    %em #{fspeaker['talk']}
