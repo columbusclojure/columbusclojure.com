@@ -9,6 +9,21 @@
       link: https://twitter.com/xandrews
       talk: read-string
 
+03/06/13:
+  speakers:
+    - name: Ryan McGowan
+      link: https://twitter.com/Ryan_VM
+      talk: "Code Review: Migrations"
+
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: "There's a function for that: kibit"
+
+  fotm:
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: interpose
+
 TBD:
   speakers:
     - name: Matthew Boston
@@ -44,7 +59,6 @@ TBD:
       talk: Bringing Clojure into Your Existing Java App
 
   fotm:
-    - talk: interpose
     - talk: into
     - talk: iterate
     - talk: merge-with
