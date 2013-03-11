@@ -3,11 +3,11 @@ $(function() {
     $(outer).children().css('height', $(outer).height());
   });
 
+  $('.when-link').on('click', highlightWhen);
+  $('.join-link').on('click', highlightJoin);
+
   loadTweets();
 });
-
-$('.when-link').on('click', highlightWhen);
-$('.join-link').on('click', highlightJoin);
 
 var green = '#91dc47';
 
