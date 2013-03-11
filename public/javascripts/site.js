@@ -6,38 +6,40 @@ $(function() {
   loadTweets();
 });
 
-$('.when-link').live('click', highlightWhen);
-$('.join-link').live('click', highlightJoin);
+$('.when-link').on('click', highlightWhen);
+$('.join-link').on('click', highlightJoin);
+
+var green = '#91dc47';
 
 function highlightWhen (e) {
   e.preventDefault();
-  $('#when').effect('highlight', {'color': '#91dc47'}, 3000);
+  $('#when').effect('highlight', {'color': green}, 3000);
 };
 
 function highlightJoin (e) {
   e.preventDefault();
-  $('#join').effect('highlight', {'color': '#91dc47'}, 3000);
+  $('#join').effect('highlight', {'color': green}, 3000);
 };
 
-function autoLinkUrl(text) {
+function linkUrls(text) {
   var urlRegex = /(https?\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g;
   return text.replace(urlRegex, "<a href='$1'>$1</a>");
 };
 
-function autoLinkUser(text) {
+function linkMentions(text) {
   var urlRegex = /@(\w+)/g;
   return text.replace(urlRegex, "<a href='http://twitter.com/$1'>@$1</a>");
 };
 
-function autoLinkHashtag(text) {
+function linkHashtags(text) {
   var urlRegex = /#(\w+)/g;
   return text.replace(urlRegex, "<a href='https://twitter.com/search/%23$1'>#$1</a>");
 };
 
-function autoLinkTweet(text){
-  text = autoLinkUrl(text);
-  text = autoLinkUser(text);
-  return autoLinkHashtag(text);
+function addLinksToTweets(text){
+  text = linkUrls(text);
+  text = linkMentions(text);
+  return linkHashtags(text);
 };
 
 function drawTweet(tweet) {
@@ -45,7 +47,7 @@ function drawTweet(tweet) {
   var template   = $('#tweetTemplate').html();
 
   if (!_.isUndefined(tweet)) {
-    var text  = autoLinkTweet(tweet.text);
+    var text  = addLinksToTweets(tweet.text);
     var time  = Date.create(tweet.created_at).relative();
     var html  = _.template(template, {tweet: text, time: time});
     var div   = $('<div>').html(html);
