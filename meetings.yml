@@ -60,6 +60,7 @@ TBD:
 
   fotm:
     - talk: into
+    - talk: doto
     - talk: iterate
     - talk: merge-with
     - talk: defrecord
