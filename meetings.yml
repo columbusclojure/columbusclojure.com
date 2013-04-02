@@ -24,6 +24,17 @@
       link: http://www.matthewboston.com
       talk: interpose
 
+04/03/13:
+  speakers:
+    - name: Ryan McGowan
+      link: https://twitter.com/Ryan_VM
+      talk: "Ragtime + Mongo wrapper"
+
+  fotm:
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: doto
+
 TBD:
   speakers:
     - name: Matthew Boston
@@ -60,7 +71,6 @@ TBD:
 
   fotm:
     - talk: into
-    - talk: doto
     - talk: iterate
     - talk: merge-with
     - talk: defrecord
