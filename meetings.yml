@@ -30,10 +30,6 @@
       link: https://twitter.com/Ryan_VM
       talk: "Ragtime + Mongo wrapper"
 
-    - name: John Andrews
-      link: https://twitter.com/xandrews
-      talk: Friend
-
   fotm:
     - name: Matthew Boston
       link: http://www.matthewboston.com
@@ -41,6 +37,10 @@
 
 TBD:
   speakers:
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Friend
+
     - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: Building a Scrabble Solver
