@@ -35,6 +35,23 @@
       link: http://www.matthewboston.com
       talk: doto
 
+05/01/13:
+  speakers:
+    - name: Ryan McGowan
+      link: https://twitter.com/Ryan_VM
+      talk: Vim
+
+    - name: Bill Robertson
+      link: https://twitter.com/billrobertson42
+      talk: Eclipse
+
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: Emacs
+
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Light Table
 TBD:
   speakers:
     - name: John Andrews
