@@ -53,6 +53,12 @@
       link: https://twitter.com/jermindek
       talk: Sublime
 
+06/05/13:
+  speakers:
+    - name: Ryan McGowan
+      link: https://twitter.com/Ryan_VM
+      talk: Clojure Reducers
+
 TBD:
   speakers:
     - name: John Andrews
