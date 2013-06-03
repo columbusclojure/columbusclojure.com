@@ -59,6 +59,10 @@
       link: https://twitter.com/Ryan_VM
       talk: Clojure Reducers
 
+    - name: Jerry Mindek
+      link: https://twitter.com/jermindek
+      talk: Comparing Speclj, Midje, and clojure.test
+
 TBD:
   speakers:
     - name: John Andrews
