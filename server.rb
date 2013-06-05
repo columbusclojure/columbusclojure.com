@@ -11,7 +11,8 @@ require 'helpers'
 
 ## VIEWS
 get '/' do
-  @next_meeting      = MeetingDates.new.next
+  # @next_meeting      = MeetingDates.new.next
+  @next_meeting = Meeting.new(Date.new(2013,6,12) + 18.hours)
 
   info               = YAML::load(File.open('meetings.yml'))
   next_meeting_talks = info[@next_meeting.date.strftime("%D")]
