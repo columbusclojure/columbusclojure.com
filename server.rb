@@ -14,8 +14,8 @@ get '/' do
   info               = YAML::load(File.open('meetings.yml'))
   next_meeting_talks = info[@next_meeting.date.strftime("%D")]
 
-  @next_meeting.speakers = next_meeting_talks['speakers'] rescue []
-  @next_meeting.fotm     = next_meeting_talks['fotm'] rescue []
+  @next_meeting.speakers = next_meeting_talks['speakers'] || [] rescue []
+  @next_meeting.fotm     = next_meeting_talks['fotm']  || [] rescue []
 
   @mailing_list = "http://groups.google.com/group/columbusclojure"
   @twitter_url  = "https://twitter.com/columbusclojure"
