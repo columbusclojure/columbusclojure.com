@@ -1,5 +1,5 @@
 require 'active_support/all'
-require './lib/meeting'
+require 'meeting'
 
 class MeetingDates
   SIX_OCLOCK = 18.hours
@@ -9,7 +9,7 @@ class MeetingDates
   end
 
   def next
-    Meeting.new @meeting_dates.find{|d| d > Time.now.beginning_of_day}
+    Meeting.new(@meeting_dates.find{|d| d > Time.now.beginning_of_day})
   end
 
   protected
