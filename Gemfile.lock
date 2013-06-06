@@ -19,6 +19,7 @@ GEM
       tilt
     i18n (0.6.4)
     method_source (0.8.1)
+    minitest (5.0.3)
     multi_json (1.6.1)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -48,6 +49,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   haml
+  minitest
   pry
   pry-debugger
   sass

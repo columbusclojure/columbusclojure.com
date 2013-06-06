@@ -11,14 +11,18 @@ $(function() {
 
 var green = '#91dc47';
 
+function highlightId (id, e) {
+  $('#'+id).effect('highlight', {'color': green}, 3000);
+};
+
 function highlightWhen (e) {
   e.preventDefault();
-  $('#when').effect('highlight', {'color': green}, 3000);
+  highlightId('when');
 };
 
 function highlightJoin (e) {
   e.preventDefault();
-  $('#join').effect('highlight', {'color': green}, 3000);
+  highlightId('join');
 };
 
 function linkUrls(text) {

@@ -7,4 +7,4 @@ gem 'sass'
 gem 'activesupport'
 gem 'pry'
 gem 'pry-debugger'
-
+gem 'minitest'
