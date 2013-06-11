@@ -7,12 +7,12 @@ require 'meeting_dates'
 
 class TestMeetingDates < Minitest::Test
   def setup
-    @subject = MeetingDates.new
+    @next_meeting_date = MeetingDates.new.next.date
   end
 
   def test_next
-    assert @subject.next.date.wednesday?
-    assert_equal 18, @subject.next.date.hour
-    assert_equal 0, @subject.next.date.min
+    assert @next_meeting_date.wednesday?
+    assert_equal 18, @next_meeting_date.hour
+    assert_equal 0, @next_meeting_date.min
   end
 end
