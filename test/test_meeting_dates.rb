@@ -1,5 +1,4 @@
 APP_LIB = File.expand_path(File.dirname(__FILE__) + '/../lib')
-
 $LOAD_PATH.unshift(APP_LIB).uniq!
 
 require 'minitest/autorun'
