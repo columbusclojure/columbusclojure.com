@@ -5,6 +5,7 @@ require 'yaml'
 require 'meeting_dates'
 require 'config'
 require 'helpers'
+require 'twitter'
 
 ## VIEWS
 get '/' do
@@ -21,6 +22,10 @@ get '/' do
   @twitter_url  = "https://twitter.com/columbusclojure"
 
   haml :welcome
+end
+
+get '/tweets', :provides => 'json' do
+  Twitter.user_timeline("columbusclojure").to_json
 end
 
 not_found do
