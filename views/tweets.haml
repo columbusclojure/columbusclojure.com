@@ -1,0 +1,11 @@
+%img(src='/images/twitter-bird-dark-bgs.png')
+.container
+  %h2
+    Latest Tweets from
+    %a(href="#{@twitter_url}" target="_blank") @ColumbusClojure
+  #tweets.halves
+
+%script#tweetTemplate(type="text/template")
+  %span.time <%= time %> &mdash;
+  %br
+  <%= tweet %>
