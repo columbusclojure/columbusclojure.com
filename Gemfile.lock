@@ -23,6 +23,7 @@ GEM
     minitest (5.0.6)
     multi_json (1.7.7)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.0.78)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -57,6 +58,7 @@ DEPENDENCIES
   activesupport
   haml
   minitest
+  newrelic_rpm
   pry
   pry-debugger
   sass
