@@ -28,6 +28,10 @@ get '/tweets', :provides => 'json' do
   Twitter.user_timeline("columbusclojure").to_json
 end
 
+get '/ping' do
+  "Pinged at #{Time.now}"
+end
+
 not_found do
   redirect '/'
 end
