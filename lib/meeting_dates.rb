@@ -6,6 +6,7 @@ class MeetingDates
   SIX_OCLOCK = 18.hours
 
   def initialize
+    # try using new Ruby 2.0 Enumerable::Lazy
     @meeting_dates = calc_meeting_dates
   end
 
