@@ -14,7 +14,7 @@ class TestMeetingDates < Minitest::Test
   end
 
   def test_next_meeting_is_within_the_first_week
-    assert_equal @next_meeting_date.month, (@next_meeting_date - 7.days).month + 1
+    assert_equal (@next_meeting_date - 7.days).month + 1, @next_meeting_date.month
   end
 
   def test_next_meeting_is_six_oclock
