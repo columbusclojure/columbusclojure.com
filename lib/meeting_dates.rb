@@ -9,10 +9,14 @@ class MeetingDates
   end
 
   def next
-    Meeting.new(@meeting_dates.find{|d| d > Time.now.beginning_of_day})
+    Meeting.new(next_meeting_after_today)
   end
 
   protected
+
+  def next_meeting_after_today
+    @meeting_dates.find{|d| d > Time.now.beginning_of_day}
+  end
 
   def calc_meeting_dates
     start_date = Date.today.beginning_of_year
