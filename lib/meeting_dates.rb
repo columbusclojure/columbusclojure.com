@@ -33,6 +33,6 @@ class MeetingDates
   end
 
   def first_wednesday(date_range)
-    date_range.select{|d| d.wday == WEDNESDAY}[0]
+    date_range.select{|d| d.wday == WEDNESDAY}.first
   end
 end
