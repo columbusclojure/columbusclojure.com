@@ -2,6 +2,7 @@ require 'active_support/all'
 require 'meeting'
 
 class MeetingDates
+  WEDNESDAY = 3
   SIX_OCLOCK = 18.hours
 
   def initialize
@@ -32,6 +33,6 @@ class MeetingDates
   end
 
   def first_wednesday(date_range)
-    date_range.select{|d| d.wday == 3}[0]
+    date_range.select{|d| d.wday == WEDNESDAY}[0]
   end
 end
