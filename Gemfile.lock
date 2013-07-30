@@ -4,6 +4,7 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    backports (3.3.3)
     chronic (0.9.1)
     coderay (1.0.9)
     columnize (0.3.6)
@@ -35,12 +36,21 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
     sass (3.2.9)
     simple_oauth (0.2.0)
     sinatra (1.4.3)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    sinatra-contrib (1.4.0)
+      backports (>= 2.0)
+      eventmachine
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.2)
+      tilt (~> 1.3)
     slop (3.4.5)
     thin (1.5.1)
       daemons (>= 1.0.9)
@@ -66,6 +76,7 @@ DEPENDENCIES
   pry-debugger
   sass
   sinatra
+  sinatra-contrib
   thin
   timecop
   twitter

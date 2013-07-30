@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/namespace'
 require 'haml'
 require 'sass'
 require 'meeting_dates'
@@ -17,8 +18,10 @@ get '/' do
   haml :welcome
 end
 
-get '/tweets', :provides => 'json' do
-  Twitter.user_timeline("columbusclojure").to_json
+namespace '/api' do
+  get '/tweets', :provides => 'json' do
+    Twitter.user_timeline("columbusclojure").to_json
+  end
 end
 
 get '/ping' do

@@ -62,7 +62,7 @@ function drawTweet(tweet) {
 }
 
 function loadTweets() {
-  var tweets_url = "http://www.columbusclojure.com/tweets";
+  var tweets_url = "http://www.columbusclojure.com/api/tweets";
 
   $.ajax({
     url: tweets_url,
