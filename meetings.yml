@@ -66,6 +66,10 @@
 07/10/13:
 
 08/07/13:
+  speakers:
+    - name: Joshua Eckroth
+      link: http://www.cse.ohio-state.edu/~eckroth/
+      talk: Machine learning with clj-ml
 
 TBD:
   speakers:
