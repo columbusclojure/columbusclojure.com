@@ -13,38 +13,38 @@ var green = '#91dc47';
 
 function highlightId (id, e) {
   $('#'+id).effect('highlight', {'color': green}, 3000);
-};
+}
 
 function highlightWhen (e) {
   e.preventDefault();
   highlightId('when');
-};
+}
 
 function highlightJoin (e) {
   e.preventDefault();
   highlightId('join');
-};
+}
 
 function linkUrls(text) {
-  var urlRegex = /(https?\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g;
+  var urlRegex = /(https?\:\/\/[^"\s\>]*[^.,;'">\:\s\>\)\]\!])/g;
   return text.replace(urlRegex, "<a href='$1'>$1</a>");
-};
+}
 
 function linkMentions(text) {
   var urlRegex = /@(\w+)/g;
   return text.replace(urlRegex, "<a href='http://twitter.com/$1'>@$1</a>");
-};
+}
 
 function linkHashtags(text) {
   var urlRegex = /#(\w+)/g;
   return text.replace(urlRegex, "<a href='https://twitter.com/search/%23$1'>#$1</a>");
-};
+}
 
 function addLinksToTweets(text){
   text = linkUrls(text);
   text = linkMentions(text);
   return linkHashtags(text);
-};
+}
 
 function drawTweet(tweet) {
   var $tweets    = $('#tweets');
@@ -59,7 +59,7 @@ function drawTweet(tweet) {
     div.addClass('half');
     $tweets.append(div);
   }
-};
+}
 
 function loadTweets() {
   var tweets_url = "http://www.columbusclojure.com/tweets";
@@ -72,4 +72,4 @@ function loadTweets() {
       });
     }
   });
-};
+}
