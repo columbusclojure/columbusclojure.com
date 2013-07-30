@@ -47,6 +47,7 @@ GEM
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     tilt (1.4.1)
+    timecop (0.6.2.2)
     twitter (4.8.1)
       faraday (~> 0.8, < 0.10)
       multi_json (~> 1.0)
@@ -66,4 +67,5 @@ DEPENDENCIES
   sass
   sinatra
   thin
+  timecop
   twitter
