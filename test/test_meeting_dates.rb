@@ -5,12 +5,13 @@ require 'minitest/autorun'
 require 'meeting_dates'
 
 class TestMeetingDates < Minitest::Test
+  WEDNESDAY = 3
   def setup
-    @next_meeting_date = MeetingDates.new.next.date
+    @next_meeting_date = MeetingDates.next.date
   end
 
   def test_next_meeting_is_wednesday
-    assert @next_meeting_date.wednesday?
+    assert_equal WEDNESDAY, @next_meeting_date.wday
   end
 
   def test_next_meeting_is_within_the_first_week
