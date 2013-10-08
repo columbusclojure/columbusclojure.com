@@ -71,6 +71,19 @@
       link: http://www.cse.ohio-state.edu/~eckroth/
       talk: Machine learning with clj-ml
 
+10/09/13:
+  speakers:
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Core.Async and ClojureScript
+
+11/06/13:
+  speakers:
+    - name: TBA
+      link: https://twitter.com/columbusclojure
+      talk: TBA
+    
+
 TBD:
   speakers:
     - name: John Andrews
@@ -80,18 +93,6 @@ TBD:
     - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: Building a Scrabble Solver
-
-    - name: John Andrews
-      link: https://twitter.com/xandrews
-      talk: Dieter
-
-    - name: John Andrews
-      link: https://twitter.com/xandrews
-      talk: resque-clojure
-
-    - name: John Anddrews
-      link: https://twitter.com/xandrews
-      talk: Accessing Static Assets in Uberjar
 
     - name: Joshua Eckroth
       link: http://www.cse.ohio-state.edu/~eckroth/
