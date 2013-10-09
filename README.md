@@ -15,4 +15,10 @@ TWITTER_OAUTH_TOKEN_SECRET
 
 (you can get these from [@bostonaholic](https://twitter.com/bostonaholic))
 
+## Development
+
 If you're using `foreman` to start the server, you can put the environment variables in a [.env](http://ddollar.github.io/foreman/#ENVIRONMENT) file.
+
+### Run the Tests
+
+`$ ruby test/*.rb`
