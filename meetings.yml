@@ -75,14 +75,10 @@
   speakers:
     - name: John Andrews
       link: https://twitter.com/xandrews
-      talk: Core.Async and ClojureScript
+      talk: core.async and ClojureScript
 
 11/06/13:
   speakers:
-    - name: TBA
-      link: https://twitter.com/columbusclojure
-      talk: TBA
-    
 
 TBD:
   speakers:
