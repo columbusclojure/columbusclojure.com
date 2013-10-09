@@ -8,14 +8,17 @@ class MeetingDates
 
   def self.next
     now = Time.now
-    if now.day <= 7
-      if now.wday == WEDNESDAY
-        Meeting.new(now.beginning_of_day + SIX_OCLOCK)
-      else
-        Meeting.new(Chronic.parse('next wednesday').beginning_of_day + SIX_OCLOCK)
+    if self.within_first_week(now)
+      if now.wday != WEDNESDAY
+        next_meeting_day = Chronic.parse('next wednesday')
       end
     else
-      Meeting.new(Chronic.parse('first wednesday next month').beginning_of_day + SIX_OCLOCK)
+      next_meeting_day = Chronic.parse('first wednesday next month')
     end
+    Meeting.new((next_meeting_day || now).beginning_of_day + SIX_OCLOCK)
+  end
+
+  def self.within_first_week(d)
+    d.day <= 7
   end
 end
