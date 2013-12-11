@@ -9,8 +9,8 @@ require 'twitter'
 
 ## VIEWS
 get '/' do
-  @next_meeting = MeetingDates.next
-  # @next_meeting = Meeting.new(Date.new(2013,10,9) + 18.hours)
+  # @next_meeting = MeetingDates.next
+  @next_meeting = Meeting.new(Date.new(2013,12,11) + 18.hours)
 
   @mailing_list = "http://groups.google.com/group/columbusclojure"
   @twitter_url  = "https://twitter.com/columbusclojure"
