@@ -103,15 +103,15 @@ TBD:
       link: http://www.cse.ohio-state.edu/~eckroth/
       talk: Loom
 
-    - name: Matthew Boson
+    - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: 'Workshop: Building a Noir web app'
 
-    - name: Matthew Boson
+    - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: 'Testing in Clojure: core.test vs. speclj vs. Midje'
 
-    - name: Matthew Boson
+    - name: Matthew Boston
       link: http://www.matthewboston.com
       talk: Bringing Clojure into Your Existing Java App
 
