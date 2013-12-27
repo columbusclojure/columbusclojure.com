@@ -62,14 +62,9 @@ function drawTweet(tweet) {
 }
 
 function loadTweets() {
-  var tweets_url = "/api/tweets";
-
-  $.get({
-    url: tweets_url,
-    success: function(data) {
-      _(6).times(function(n) {
-        drawTweet(data[n]);
-      });
-    }
+  $.get('/tweets', function(tweets) {
+    _(6).times(function(n) {
+      drawTweet(tweets[n]);
+    });
   });
 }
