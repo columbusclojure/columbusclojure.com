@@ -13,7 +13,7 @@ TWITTER_OAUTH_TOKEN
 TWITTER_OAUTH_TOKEN_SECRET
 ```
 
-(you can get these from [@bostonaholic](https://twitter.com/bostonaholic))
+Ask [@bostonaholic](https://twitter.com/bostonaholic) for these if you'll be needing them.
 
 ## Development
 
@@ -21,4 +21,4 @@ If you're using `foreman` to start the server, you can put the environment varia
 
 ### Run the Tests
 
-`$ ruby test/*.rb`
+`$ rake test`

@@ -1,24 +1,19 @@
-require 'yaml'
+require 'chronic'
 
 class Meeting
-  attr_accessor :date, :speakers, :fotm
+  attr_reader :date, :speakers, :fotm
 
-  def initialize(date = Time.now.beginning_of_day)
-    @date = date
-
-    next_meeting_talks = self.class.info[date.strftime("%D")]
-
-    @speakers = next_meeting_talks['speakers'] || [] rescue []
-    @fotm     = next_meeting_talks['fotm']  || [] rescue []
+  def initialize(date, info={})
+    @date     = Chronic.parse("#{date} at 6:00PM")
+    @speakers = info.fetch("speakers") rescue []
+    @fotm     = info.fetch("fotm") rescue []
   end
 
-  def self.info
-    YAML::load(File.open('meetings.yml'))
+  def no_speakers?
+    @speakers.nil? or @speakers.empty?
   end
 
-  def self.dates
-    info.keys.grep(/(\d+)\/(\d+)\/(\d+)/) do |m|
-      Date.new(2000 + $3.to_i, $1.to_i, $2.to_i)
-    end
+  def no_fotm?
+    @fotm.nil? or @fotm.empty?
   end
 end
