@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'activesupport'
 gem 'chronic'
 gem 'haml'
 gem 'minitest'
 gem 'newrelic_rpm'
 gem 'pry'
+gem 'rake'
 gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'

@@ -1,0 +1,29 @@
+01/15/14:
+
+TBD:
+  speakers:
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Friend
+
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: Building a Scrabble Solver
+
+    - name: Joshua Eckroth
+      link: http://www.cse.ohio-state.edu/~eckroth/
+      talk: Loom
+
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: 'Workshop: Building a Noir web app'
+
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: Bringing Clojure into Your Existing Java App
+
+  fotm:
+    - talk: into
+    - talk: iterate
+    - talk: 'merge-with'
+    - talk: defrecord

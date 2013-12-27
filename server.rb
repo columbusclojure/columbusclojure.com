@@ -2,16 +2,18 @@ require 'sinatra'
 require 'sinatra/namespace'
 require 'haml'
 require 'sass'
-require 'meeting_dates'
 require 'config'
 require 'helpers'
+
 require 'twitter'
+
+require 'meeting_info_finder'
+require 'meeting_date_calculator'
 
 ## VIEWS
 get '/' do
-  # @next_meeting = MeetingDates.next
-  @next_meeting = Meeting.new(Date.new(2013,12,11) + 18.hours)
-
+  @next_meeting = MeetingInfoFinder.new('./data/meetings.yml')
+                    .find(MeetingDateCalculator.next)
   @mailing_list = "http://groups.google.com/group/columbusclojure"
   @twitter_url  = "https://twitter.com/columbusclojure"
 
@@ -20,7 +22,7 @@ end
 
 namespace '/api' do
   get '/tweets', :provides => 'json' do
-    Twitter.user_timeline("columbusclojure").to_json
+    twitter_client.user_timeline("columbusclojure").to_json
   end
 end
 

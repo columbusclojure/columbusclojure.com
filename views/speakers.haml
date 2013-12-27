@@ -4,7 +4,7 @@
 
 %section
   %ul
-    - if next_meeting.speakers.empty? && next_meeting.fotm.empty?
+    - if next_meeting.no_speakers? && next_meeting.no_fotm?
       = haml :call_for_speakers, :locals => {:mailing_list => mailing_list}
     - else
       = haml :speakers_list, :locals => {:speakers => next_meeting.speakers, :fotm => next_meeting.fotm}
