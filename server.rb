@@ -22,6 +22,8 @@ end
 
 namespace '/api' do
   get '/tweets', :provides => 'json' do
+    headers \
+      "Access-Control-Allow-Origin" => "*"
     twitter_client.user_timeline("columbusclojure").to_json
   end
 end
