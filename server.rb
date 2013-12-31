@@ -30,7 +30,7 @@ get '/tweets', :provides => 'json' do
     config.oauth_token = ENV['TWITTER_OAUTH_TOKEN']
     config.oauth_token_secret = ENV['TWITTER_OAUTH_TOKEN_SECRET']
   end
-  tweets = twitter_client.user_timeline("columbusclojure").map { |tweet| tweet.attrs }
+  tweets = twitter_client.user_timeline("columbusclojure", count: 6).map(&:attrs)
 
   json tweets
 end

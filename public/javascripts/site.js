@@ -61,10 +61,14 @@ function drawTweet(tweet) {
   }
 }
 
+function resizeThirds() {
+  _.each($('.thirds'), function(outer) {
+    $(outer).children().css('height', $(outer).height());
+  });
+}
+
 function loadTweets() {
   $.get('/tweets', function(tweets) {
-    _(6).times(function(n) {
-      drawTweet(tweets[n]);
-    });
+    _.each(tweets, drawTweet);
   });
 }
