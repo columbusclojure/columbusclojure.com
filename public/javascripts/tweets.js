@@ -1,38 +1,8 @@
-$(function() {
-  $('.when-link').on('click', highlightWhen);
-  $('.join-link').on('click', highlightJoin);
-
-  resizeThirds();
-  App.Tweets.loadTweets();
-});
-
-function resizeThirds() {
-  _.each($('.thirds'), function(outer) {
-    $(outer).children().css('height', $(outer).height());
-  });
-}
-
-var App = {};
-
-App.Colors = {
-  green: '#91dc47'
-};
-
-function highlight (selector) {
-  $(selector).effect('highlight', {'color': App.Colors.green}, 3000);
-}
-
-function highlightWhen (e) {
-  e.preventDefault();
-  highlight('#when');
-}
-
-function highlightJoin (e) {
-  e.preventDefault();
-  highlight('#join');
-}
-
 App.Tweets = {
+  init: function() {
+    _.bindAll(this, 'drawTweet')
+  },
+
   linkUrls: function(text) {
     var urlRegex = /(https?\:\/\/[^"\s\>]*[^.,;'">\:\s\>\)\]\!])/g;
     return text.replace(urlRegex, "<a href='$1'>$1</a>");
@@ -69,9 +39,9 @@ App.Tweets = {
   loadTweets: function() {
     var self = this;
     $.get('/tweets', function(tweets) {
-      _.each(tweets, function(tweet) {
-        self.drawTweet(tweet);
-      });
+      _.each(tweets, self.drawTweet);
     });
   }
 };
+
+App.Tweets.init();
