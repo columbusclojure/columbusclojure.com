@@ -1,5 +1,5 @@
-task :default => [:test]
+require 'rake/testtask'
 
-task :test do
-  ruby "-Ilib test/*.rb --pride"
+Rake::TestTask.new do |t|
+  t.pattern = "test/test_*.rb"
 end
