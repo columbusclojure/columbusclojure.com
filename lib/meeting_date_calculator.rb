@@ -2,10 +2,11 @@ require 'chronic'
 
 class MeetingDateCalculator
   WEDNESDAY = 3
+  SIX_OCLOCK = 18
 
   def self.next
     next_meeting_date = next_first_wednesday
-    Time.new next_meeting_date.year, next_meeting_date.month, next_meeting_date.day
+    Time.new next_meeting_date.year, next_meeting_date.month, next_meeting_date.day, SIX_OCLOCK
   end
 
   private

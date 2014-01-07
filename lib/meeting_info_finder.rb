@@ -1,5 +1,6 @@
 require 'yaml'
-require 'meeting'
+require 'chronic'
+require './lib/meeting'
 
 class MeetingInfoFinder
   attr_reader :meetings
@@ -7,11 +8,17 @@ class MeetingInfoFinder
   def initialize(filename)
     yaml = YAML.load_file(filename)
     @meetings = yaml.reject{|k| k == "TBD"}.inject([]) do |meetings, (date, info)|
-      meetings << Meeting.new(date, info)
+      meetings << Meeting.new(Chronic.parse("#{date} at 6:00PM"), info)
     end
   end
 
   def find(date)
-    @meetings.bsearch {|meeting| meeting.date >= date}
+    meeting_info = @meetings.bsearch {|meeting| meeting.date >= date}
+    return meeting_info unless meeting_info.nil?
+
+    meeting_info = @meetings.bsearch {|meeting| meeting.date >= Time.now}
+    return meeting_info unless meeting_info.nil?
+
+    Meeting.new date
   end
 end

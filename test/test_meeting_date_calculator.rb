@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require 'meeting_date_calculator'
 require 'timecop'
 
-class TestMeetings < Minitest::Test
+class TestMeetingDateCalculator < Minitest::Test
   def test_next_meeting_is_wednesday
     next_meeting = MeetingDateCalculator.next
     assert_equal MeetingDateCalculator::WEDNESDAY, next_meeting.wday

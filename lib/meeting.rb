@@ -1,10 +1,8 @@
-require 'chronic'
-
 class Meeting
   attr_reader :date, :speakers, :fotm
 
   def initialize(date, info={})
-    @date     = Chronic.parse("#{date} at 6:00PM")
+    @date     = date
     @speakers = info.fetch("speakers") rescue []
     @fotm     = info.fetch("fotm") rescue []
   end
