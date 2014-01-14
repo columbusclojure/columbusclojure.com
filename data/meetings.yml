@@ -1,4 +1,8 @@
 02/05/14:
+  speakers:
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Datomic
 
 TBD:
   speakers:
