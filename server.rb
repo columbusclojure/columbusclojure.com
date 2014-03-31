@@ -17,7 +17,7 @@ get '/' do
   @mailing_list = "http://groups.google.com/group/columbusclojure"
   @twitter_url  = "https://twitter.com/columbusclojure"
 
-  haml :welcome
+  haml :index
 end
 
 get '/tweets', :provides => 'json' do
