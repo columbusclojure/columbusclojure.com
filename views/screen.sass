@@ -7,172 +7,170 @@ $text: #333
 $lite-gray: #eee
 
 body
-    color: $text
-    font: 14px/1.5 "Helvetica"
-    background: #fff
+  color: $text
+  font: 14px/1.5 "Helvetica"
+  background: #fff
 
-    .container
-        width: 800px
-        margin: auto
+  .container
+    width: 800px
+    margin: auto
 
 p
-    margin-bottom: 1em
+  margin-bottom: 1em
 
 h1
-    margin: auto
-    position: absolute
-    top: 1.0em
-    color: $dark-blue
-    font-size: 3.5em
+  margin: auto
+  position: absolute
+  top: 1.0em
+  color: $dark-blue
+  font-size: 3.5em
 
-    img
-        vertical-align: text-top
-        height: 1.2em
+  img
+    vertical-align: text-top
+    height: 1.2em
 
-    a:hover
-        text-decoration: none
+  a:hover
+    text-decoration: none
 
 h2
-    font-size: 1.5em
-    margin-bottom: 1em
+  font-size: 1.5em
+  margin-bottom: 1em
 
-    img
-        vertical-align: text-top
+  img
+    vertical-align: text-top
 
-a
-    &, &:visited
-        text-decoration: none
-        color: $dark-blue
+a, a:visited
+  text-decoration: none
+  color: $dark-blue
 
-    &:hover
-        text-decoration: underline
+  &:hover
+    text-decoration: underline
 
 #image-bar
-    margin-bottom: 2em
+  margin-bottom: 2em
 
-    img
-        width: 100%
+  img
+    width: 100%
 
 //#main
 
 #announcements
-    position: relative
-    height: 36px
-    text-align: center
-    color: white
-    font-size: 17px
-    line-height: 36px
-    text-decoration: none
-    background: $dark-blue
-    -webkit-box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.2)
-    -moz-box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.2)
-    box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.2)
+  position: relative
+  height: 36px
+  text-align: center
+  color: white
+  font-size: 17px
+  line-height: 36px
+  text-decoration: none
+  background: $dark-blue
+  -webkit-box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.2)
+  -moz-box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.2)
+  box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.2)
 
 #banner
-    font-size: 1.5em
-    margin-bottom: 2em
-    text-align: center
-    vertical-align: text-top
+  font-size: 1.5em
+  margin-bottom: 2em
+  text-align: center
+  vertical-align: text-top
 
-    a
-        color: $dark-green
-        margin: 2em
+  a
+    color: $dark-green
+    margin: 2em
 
 #twitter
-    background-color: $lite-blue
-    bottom: 0
-    min-height: 300px
-    padding-top: 2em
-    padding-left: 2em
-    padding-bottom: 100px
+  background-color: $lite-blue
+  bottom: 0
+  min-height: 300px
+  padding-top: 2em
+  padding-left: 2em
+  padding-bottom: 100px
 
-    img
-        float: left
-        width: 15%
+  img
+    float: left
+    width: 15%
 
 #tweets
-    overflow: hidden
+  overflow: hidden
 
-    .tweet
-        width: 368px
-        float: left
-        text-indent: -1em
-        margin-left: 1em
-        margin-right: 12px
-        margin-bottom: 1em
-
-        &:last-child
-            margin-right: 0
-
-        .time
-            font-style: italic
-            font-size: smaller
-
-    a
-        &, &:visited
-            color: $text
-            font-weight: bold
-
-.thirds
-    overflow: hidden
-
-    .third
-        width: 31%
-        float: left
-        margin-right: 2em
-        margin-bottom: 2em
-        border-top: 3px $text solid
-
-        &:last-child
-            margin-right: 0
-
-        &.colored
-            background: $liter-blue
-
-.halves
-    overflow: hidden
-
-    .half
-        height: 6em
-        width: 48%
-        float: left
-        margin-right: 2em
-        margin-bottom: 2em
-
-        &:last-child
-            margin-right: 0
-
-li
-    padding-bottom: 0.5em
+  .tweet
+    width: 368px
+    float: left
     text-indent: -1em
     margin-left: 1em
-    list-style: none
+    margin-right: 12px
+    margin-bottom: 1em
+
+    &:last-child
+      margin-right: 0
+
+  .time
+    font-style: italic
+    font-size: smaller
+
+  a, a:visited
+    color: $text
+    font-weight: bold
+
+.thirds
+  overflow: hidden
+
+  .third
+    width: 31%
+    float: left
+    margin-right: 2em
+    margin-bottom: 2em
+    border-top: 3px $text solid
+
+    &:last-child
+      margin-right: 0
+
+    &.colored
+      background: $liter-blue
+
+.halves
+  overflow: hidden
+
+  .half
+    height: 6em
+    width: 48%
+    float: left
+    margin-right: 2em
+    margin-bottom: 2em
+
+    &:last-child
+      margin-right: 0
+
+li
+  padding-bottom: 0.5em
+  text-indent: -1em
+  margin-left: 1em
+  list-style: none
 
 .left
-    float: left
-    width: 48%
+  float: left
+  width: 48%
 
 .right
-    float: right
-    width: 48%
+  float: right
+  width: 48%
 
 #date-block
-    line-height: .75
+  line-height: .75
 
-    .weekday
-        font-weight: bold
-        font-size: 2.7em
-        color: $lite-blue
-        text-transform: uppercase
+  .weekday
+    font-weight: bold
+    font-size: 2.7em
+    color: $lite-blue
+    text-transform: uppercase
 
-    .month-day
-        font-weight: bold
-        font-size: 4.8em
-        color: $text
-        text-transform: uppercase
+  .month-day
+    font-weight: bold
+    font-size: 4.8em
+    color: $text
+    text-transform: uppercase
 
-    .time
-        font-weight: bold
-        font-size: 4.9em
-        color: $lite-green
-        text-transform: uppercase
+  .time
+    font-weight: bold
+    font-size: 4.9em
+    color: $lite-green
+    text-transform: uppercase
