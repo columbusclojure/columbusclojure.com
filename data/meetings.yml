@@ -15,6 +15,13 @@
     - name: John Andrews
       link: https://twitter.com/xandrews
       talk: Big Datomic
+
+05/07/14:
+  speakers:
+    - name: Bill Robertson
+      link: https://twitter.com/billrobertson42
+      talk: Immutant
+
 TBD:
   speakers:
     - name: John Andrews
