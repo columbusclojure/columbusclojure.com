@@ -12,18 +12,21 @@ body
   background: #fff
 
   .container
-    width: 800px
-    margin: auto
+    max-width: 800px
+    margin: 0 auto
 
 p
   margin-bottom: 1em
 
 h1
-  margin: auto
+  margin: 0
   position: absolute
   top: 1.0em
+  right: 0
+  left: 0
   color: $dark-blue
   font-size: 3.5em
+  text-align: center
 
   img
     vertical-align: text-top
@@ -31,6 +34,18 @@ h1
 
   a:hover
     text-decoration: none
+
+@media (max-width: 815px)
+  h1
+    font-size: 2.5em
+
+@media (max-width: 565px)
+  h1
+    font-size: 1.5em
+
+@media (max-width: 500px)
+  h1
+    font-size: 1.0em
 
 h2
   font-size: 1.5em
