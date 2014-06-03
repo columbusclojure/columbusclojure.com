@@ -22,6 +22,20 @@
       link: https://twitter.com/billrobertson42
       talk: Immutant
 
+06/04/14:
+  speakers:
+    - name: Matthew Boston
+      link: http://www.matthewboston.com
+      talk: Reagent
+
+    - name: John Andrews
+      link: https://twitter.com/xandrews
+      talk: Om
+
+    - name: Chris Westra
+      link: https://twitter.com/_Bestra
+      talk: React.js
+
 TBD:
   speakers:
     - name: John Andrews
