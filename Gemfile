@@ -14,6 +14,7 @@ gem 'twitter'
 gem 'timecop'
 
 group :development do
+  gem 'foreman'
   gem 'pry'
 end
 
