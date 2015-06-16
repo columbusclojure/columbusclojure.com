@@ -15,7 +15,7 @@ get '/' do
   @next_meeting = MeetingInfoFinder.new('./data/meetings.yml')
                     .find(MeetingDateCalculator.next)
   @mailing_list = "http://groups.google.com/group/columbusclojure"
-  @twitter_url  = "https://twitter.com/columbusclojure"
+  @twitter_url  = "https://twitter.com/ColumbusClojure"
 
   haml :welcome
 end
@@ -30,7 +30,7 @@ get '/tweets', :provides => 'json' do
     config.access_token = ENV['TWITTER_ACCESS_TOKEN']
     config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
   end
-  tweets = twitter_client.user_timeline("columbusclojure", count: 6).map(&:attrs)
+  tweets = twitter_client.user_timeline("ColumbusClojure", count: 6).map(&:attrs)
 
   json tweets
 end
