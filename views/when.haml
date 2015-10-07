@@ -3,13 +3,7 @@
   Next Meeting
 
 %section
-  #date-block
-    - if next_meeting
-      %span.weekday
-        = formatted_weekday(next_meeting.date)
-      %span.month-day
-        = formatted_month_day(next_meeting.date)
-      %span.time
-        = formatted_time(next_meeting.date)
-    - else
-      %span.tbd TBD
+  %p
+    See upcoming meetup information, and RSVP,
+    on our
+    %a(href="http://www.meetup.com/ColumbusClojure/") Meetup page
