@@ -9,8 +9,8 @@ You will need to to set the following environment variables:
 ```
 TWITTER_CONSUMER_KEY
 TWITTER_CONSUMER_SECRET
-TWITTER_OAUTH_TOKEN
-TWITTER_OAUTH_TOKEN_SECRET
+TWITTER_ACCESS_TOKEN
+TWITTER_ACCESS_TOKEN_SECRET
 ```
 
 Ask [@bostonaholic](https://twitter.com/bostonaholic) for these if you'll be needing them.
