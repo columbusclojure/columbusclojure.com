@@ -10,8 +10,8 @@ gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'thin'
-gem 'twitter'
 gem 'timecop'
+gem 'twitter'
 
 group :development do
   gem 'foreman'
