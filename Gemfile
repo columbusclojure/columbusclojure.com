@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.9'
+ruby '2.5.3'
 
 gem 'chronic'
 gem 'haml'
